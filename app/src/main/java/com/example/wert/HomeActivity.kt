@@ -67,8 +67,8 @@ class HomeActivity : AppCompatActivity() {
 
                     val lucro = saldoRoi - saldoInvestido
 
-                    if (saldoRoi != 0.0)
-                        lucroPctg = lucro * 100/saldoRoi
+                    if (saldoInvestido != 0.0)
+                        lucroPctg = lucro * 100/saldoInvestido
 
                     setValuesOnView(saldoInvestido, lucro, lucroPctg, saldoRoi, emAlta, emQueda, roi, inv)
                 }

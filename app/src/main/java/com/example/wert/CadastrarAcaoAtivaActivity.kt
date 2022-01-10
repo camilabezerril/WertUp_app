@@ -205,7 +205,7 @@ class CadastrarAcaoAtivaActivity : AppCompatActivity() {
             label_qtd_comprada_cadastro_ativa.visibility = View.INVISIBLE
             rightInput = false
         }
-        if (spinner_prazo_cadastro_ativa.selectedItem.toString() == "Prazo*") {
+        if (spinner_prazo_cadastro_ativa.selectedItem.toString() == "Prazo de investimento*") {
             rl_spinner_prazo_cadastro_ativa.setBackgroundResource(R.drawable.rounded_wrong_input)
             label_prazo_cadastro_ativa.visibility = View.INVISIBLE
             rightInput = false
