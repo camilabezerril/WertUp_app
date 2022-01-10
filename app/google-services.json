@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "598361511822",
+    "project_id": "wert-cc7c8",
+    "storage_bucket": "wert-cc7c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598361511822:android:4a129c3fdf0e97196b76df",
+        "android_client_info": {
+          "package_name": "com.example.wert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "598361511822-8fpspklocpf98dfn13f8qfm5kjpkd6o5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQhckL7zLCkFUvFVLSuifW3GFcPd3K2XA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "598361511822-8fpspklocpf98dfn13f8qfm5kjpkd6o5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

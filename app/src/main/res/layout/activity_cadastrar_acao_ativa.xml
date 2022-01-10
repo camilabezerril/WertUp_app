@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastrarAcaoAtivaActivity"
+    android:background="#E5E5E5">
+
+    <TextView
+        android:id="@+id/alert_cadastrar_acao_ativa"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="43dp"
+        android:elevation="2dp"
+        android:textSize="11dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:background="@drawable/rounded_alert_cadastro"
+        android:drawableStart="@drawable/atencao_icon_cadastro"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:text="Algum campo obrigatório não foi preenchido."
+        android:textColor="#DFDCDC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cadastrar_acao_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Cadastrar nova ação"
+        android:textColor="#828282"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_voltar_cadastro_acao_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:src="@drawable/voltar_icon"
+        app:layout_constraintEnd_toStartOf="@+id/tv_cadastrar_acao_ativa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_ticker_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:elevation="0.2dp"
+        android:text="Ticker*"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_ticker_cadastrar_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_ticker_cadastrar_ativa" />
+
+    <EditText
+        android:id="@+id/et_ticker_cadastrar_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/rounded_fields"
+        android:textColorHint="#828282"
+        android:hint="Ticker*"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cadastrar_acao_ativa" />
+
+    <TextView
+        android:id="@+id/label_nome_acao_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Nome da ação*"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_nome_cadastrar_acao_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_nome_cadastrar_acao_ativa" />
+
+    <EditText
+        android:id="@+id/et_nome_cadastrar_acao_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Nome da ação*"
+        android:textColorHint="#828282"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_fields"
+        app:layout_constraintEnd_toEndOf="@+id/et_ticker_cadastrar_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_ticker_cadastrar_ativa"
+        app:layout_constraintTop_toBottomOf="@+id/et_ticker_cadastrar_ativa" />
+
+    <TextView
+        android:id="@+id/label_qtd_comprada_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        android:text="Quantidade comprada*"
+        app:layout_constraintBottom_toBottomOf="@+id/rl_spinner_qtd_comprada_cadastro_ativa"
+        app:layout_constraintStart_toStartOf="@+id/rl_spinner_qtd_comprada_cadastro_ativa" />
+
+    <RelativeLayout
+        android:id="@+id/rl_spinner_qtd_comprada_cadastro_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_fields"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/et_nome_cadastrar_acao_ativa"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_cadastrar_acao_ativa"
+        app:layout_constraintEnd_toEndOf="@id/et_nome_cadastrar_acao_ativa">
+
+        <Spinner
+            android:id="@+id/spinner_qtd_comprada_cadastro_ativa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_preco_compra_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Preço da compra*"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_preco_compra_cadastrar_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_preco_compra_cadastrar_ativa" />
+
+    <EditText
+        android:id="@+id/et_preco_compra_cadastrar_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_fields"
+        android:hint="R$ Preço de compra*"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#828282"
+        app:layout_constraintEnd_toEndOf="@+id/rl_spinner_qtd_comprada_cadastro_ativa"
+        app:layout_constraintStart_toStartOf="@+id/rl_spinner_qtd_comprada_cadastro_ativa"
+        app:layout_constraintTop_toBottomOf="@+id/rl_spinner_qtd_comprada_cadastro_ativa" />
+
+    <TextView
+        android:id="@+id/label_alerta_venda_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Alerta de venda*"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_alerta_venda_cadastrar_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_alerta_venda_cadastrar_ativa" />
+
+    <EditText
+        android:id="@+id/et_alerta_venda_cadastrar_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_fields"
+        android:hint="R$ Alerta de venda*"
+        android:paddingLeft="15dp"
+        android:textColorHint="#828282"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_preco_compra_cadastrar_ativa"
+        app:layout_constraintStart_toStartOf="@+id/et_preco_compra_cadastrar_ativa"
+        app:layout_constraintTop_toBottomOf="@+id/et_preco_compra_cadastrar_ativa" />
+
+    <TextView
+        android:id="@+id/label_prazo_cadastro_ativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Prazo de investimento*"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rl_spinner_prazo_cadastro_ativa"
+        app:layout_constraintStart_toStartOf="@+id/rl_spinner_prazo_cadastro_ativa" />
+
+    <RelativeLayout
+        android:id="@+id/rl_spinner_prazo_cadastro_ativa"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_fields"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/et_alerta_venda_cadastrar_ativa"
+        app:layout_constraintTop_toBottomOf="@+id/et_alerta_venda_cadastrar_ativa"
+        app:layout_constraintEnd_toEndOf="@id/et_alerta_venda_cadastrar_ativa">
+
+        <Spinner
+            android:id="@+id/spinner_prazo_cadastro_ativa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_confirmar_ativa"
+        android:text="Confirmar"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:textColor="#F2F2F2"
+        android:background="#A5A5A5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

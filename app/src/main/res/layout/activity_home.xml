@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="36dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/tv_usuario_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#333333"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Olá, Anônimo" />
+
+            <ImageButton
+                android:id="@+id/ib_ajustes_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="32dp"
+                android:background="@null"
+                android:src="@drawable/gear_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_lucro_home"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="35dp"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_usuario_home">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_lucro_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Lucro total"
+                        android:textColor="#828282"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/lucro_seta_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="23dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_dinheiro_lucro_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#1CC3FC"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_lucro_home"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lucro_home"
+                        android:layout_marginTop="10dp"
+                        android:text="R$ 1.000,00" />
+
+                    <TextView
+                        android:id="@+id/tv_pctg_lucro_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/seta_up_simples_icon"
+                        android:drawablePadding="4dp"
+                        android:text="+3,0%"
+                        android:textColor="#6FCF97"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="40dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_dinheiro_lucro_home"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_dinheiro_lucro_home" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_saldo_home"
+                android:layout_width="0dp"
+                android:layout_height="138dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="35dp"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_lucro_home">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_saldo_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="26dp"
+                        android:drawablePadding="10dp"
+                        android:text="Saldo investido"
+                        android:textColor="#828282"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/saldo_investido_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_dinheiro_saldo_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/tv_saldo_home"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_home"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#4F4F4F"
+                        android:text="R$1.000,00"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_saldo_roi_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saldo com ROI"
+                        app:layout_constraintStart_toStartOf="@+id/tv_dinheiro_saldo_home"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_dinheiro_saldo_home"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_regular"/>
+
+                    <TextView
+                        android:id="@+id/tv_dinheiro_saldo_roi_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="R$.1500,00"
+                        android:textColor="#6FCF97"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tv_saldo_roi_home"
+                        app:layout_constraintTop_toTopOf="@+id/tv_saldo_roi_home" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_acoes_home"
+                android:layout_width="0dp"
+                android:layout_height="138dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="35dp"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_saldo_home">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_acoes_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="26dp"
+                        android:drawableStart="@drawable/acoes_em_alta_icon"
+                        android:drawablePadding="10dp"
+                        android:text="Ações em Alta"
+                        android:textColor="#828282"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_dinheiro_acoes_em_alta_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="20sp"
+                        android:textColor="#4F4F4F"
+                        app:layout_constraintStart_toStartOf="@+id/tv_acoes_home"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_acoes_home"
+                        android:text="R$ 1.000,00" />
+
+                    <TextView
+                        android:id="@+id/tv_acoes_em_baixa_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ações em baixa"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        app:layout_constraintStart_toStartOf="@+id/tv_dinheiro_acoes_em_alta_home"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_dinheiro_acoes_em_alta_home" />
+
+                    <TextView
+                        android:id="@+id/tv_dinheiro_acoes_em_baixa_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#EB5757"
+                        app:layout_constraintStart_toEndOf="@+id/tv_acoes_em_baixa_home"
+                        app:layout_constraintTop_toTopOf="@+id/tv_acoes_em_baixa_home"
+                        android:layout_marginStart="5dp"
+                        android:text="R$ 100,00" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_graficos_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="35dp"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_acoes_home">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_graficos_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                </androidx.viewpager2.widget.ViewPager2>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="#828282"
+        app:itemTextColor="#828282">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

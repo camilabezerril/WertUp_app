@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastrarAcaoStatusActivity"
+    android:background="#E5E5E5">
+
+    <TextView
+        android:id="@+id/tv_cadastrar_acao_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Cadastrar nova ação"
+        android:textColor="#828282"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_voltar_cadastro_acao_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:src="@drawable/voltar_icon"
+        app:layout_constraintEnd_toStartOf="@+id/tv_cadastrar_acao_status"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_et_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:text="Status*"
+        android:elevation="0.2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rl_spinner_status_cadastro_status"
+        app:layout_constraintStart_toStartOf="@+id/rl_spinner_status_cadastro_status" />
+
+    <RelativeLayout
+        android:id="@+id/rl_spinner_status_cadastro_status"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/rounded_fields"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cadastrar_acao_status">
+
+        <Spinner
+            android:id="@+id/spinner_status_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_avancar_status"
+        android:text="Avançar"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:textColor="#F2F2F2"
+        android:background="#A5A5A5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
