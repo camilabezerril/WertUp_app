@@ -20,9 +20,8 @@ object UpdateAcao {
         val overview = AcaoData.getOverview(acao.ticker)
         val timeSeriesDaily = AcaoData.getTimeSeriesDaily(acao.ticker)
 
-        // verifica se ticker existe (essa verificação só deve ocorrer no momento da criação da ação
-        // por isso há a segunda checagem
-        if(!timeSeriesDaily.has("Time Series (Daily)") && acao.weekly == null)
+        // verifica se ticker existe (essa verificação só deve ocorrer no momento da criação da ação)
+        if(!timeSeriesDaily.has("Time Series (Daily)"))
             throw RuntimeException()
 
         try {
@@ -55,9 +54,8 @@ object UpdateAcao {
         val overview = AcaoData.getOverview(acao.ticker)
         val timeSeriesDaily = AcaoData.getTimeSeriesDaily(acao.ticker)
 
-        // verifica se ticker existe (essa verificação só deve ocorrer no momento da criação da ação
-        // por isso há a segunda checagem
-        if(!timeSeriesDaily.has("Time Series (Daily)") && acao.weekly == null)
+        // verifica se ticker existe (essa verificação só deve ocorrer no momento da criação da ação)
+        if(!timeSeriesDaily.has("Time Series (Daily)"))
             throw RuntimeException()
 
         try {
